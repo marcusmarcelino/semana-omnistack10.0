@@ -1,9 +1,17 @@
 const express = require('express');
 const monggose = require('mongoose');
 const cors = require('cors');
+
+const http = require('http');
+
 const routes = require('./routes');
+const { setupWebsocket } = require('./websocket')
+
 
 const app = express();
+const server = http.Server(app);
+
+setupWebsocket(server);
 
 monggose.connect('mongodb+srv://omnistack:omnistack@cluster0-moyjw.mongodb.net/week10?retryWrites=true&w=majority',{
   useNewUrlParser: true,
@@ -15,7 +23,7 @@ monggose.connect('mongodb+srv://omnistack:omnistack@cluster0-moyjw.mongodb.net/w
 app.use(cors());
 app.use(express.json());
 app.use(routes);
-app.listen(3333);
+server.listen(3333);
 
 
 //Métodos HTTP: GET, POST, PUT, DELETE
