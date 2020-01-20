@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Image, View, Text, TextInput, TouchableOpacity, Keyboard} from 'react-native';
+import { StyleSheet, Image, View, Text, TextInput, TouchableOpacity, Keyboard, Alert} from 'react-native';
 import MapView, { Marker, Callout } from 'react-native-maps';
 import { requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import api from '../services/api';
+import {connect, disconnect} from '../services/socket';
 
 function Main({ navigation }) {
   const [devs, setDevs] = useState([]);
@@ -37,6 +38,16 @@ function Main({ navigation }) {
     Keyboard.addListener('keyboardDidHide', ()=>setKeyboardShown(false));
   }, []);
 
+  function setupWebsocket(){
+    const { latitude, longitude} = currentRegion;
+    
+    connect(
+      latitude,
+      longitude,
+      techs,
+    );
+  }
+
   async function loadDevs(){
     const {latitude, longitude} = currentRegion;
 
@@ -47,8 +58,22 @@ function Main({ navigation }) {
         techs
       }
     });
-
+    if(response.data.devs=='')
+      alertDevs();
+    
     setDevs(response.data.devs);
+    setupWebsocket();
+  }
+
+  function alertDevs(){
+    Alert.alert(
+      'Atenção',
+      'Não á devs próximos a sua localização que utilização esta tecnologia.',
+      [
+        {text: 'OK', onPress: () => console.log('OK Pressed')},
+      ],
+      { cancelable: false }
+    )
   }
 
   function handleRegionChanged (region){
