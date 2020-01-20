@@ -62,6 +62,7 @@ function Main({ navigation }) {
       alertDevs();
     
     setDevs(response.data.devs);
+    console.log(response.data.devs);
     setupWebsocket();
   }
 
