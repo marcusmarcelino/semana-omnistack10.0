@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./imgs/logo.svg" align="center"></img>
+  <img height="200" width="200" src="./imgs/logo.svg" align="center"></img>
 </div>
 
 <h1 align="center"> <strong> Semana Omnistack 10 </strong> </h1>
@@ -71,7 +71,7 @@ Web -> resultado da aplicação em execução:
 ## Mobile
 App Mobile (React Native) -> resultado da execução:
 <div align="center">
-  <img align="center" height="100" width="50" src="./imgs/app-mobile.jpeg"></img>
+  <img align="center" height="400" width="220" src="./imgs/app-mobile.jpeg"></img>
 </div>
 
 ## Licença
