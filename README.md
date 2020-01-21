@@ -1,4 +1,6 @@
-<img src="./imgs/logo.svg" align="center"></img>
+<div align="center">
+  <img src="./imgs/logo.svg" align="center"></img>
+</div>
 
 <h1 align="center"> <strong> Semana Omnistack 10 </strong> </h1>
 
@@ -9,13 +11,22 @@
     <img src="https://img.shields.io/badge/node.js@lts-12.14.1-informational?logo=Node.JS"></img>
   </a>
 
-  <img src="https://img.shields.io/badge/react-16.12.0-informational?logo=react"></img>
+  <a aria-label="Versão do React" href="#">
+    <img src="https://img.shields.io/badge/react-16.12.0-informational?logo=react"></img>
+  </a>
   
-  <img src="https://img.shields.io/badge/expo-36.0.0-informational?logo=expo"></img>
+  <a aria-label="Versão do Expo" href="#">
+    <img src="https://img.shields.io/badge/expo-36.0.0-informational?logo=expo"></img>
+  </a>  
+    
+  <a aria-label="Rocketseat" href="#">
+    <img src="https://img.shields.io/badge/OmniStack-done-green?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAALVBMVEVHcExxWsF0XMJzXMJxWcFsUsD///9jRrzY0u6Xh9Gsn9n39fyMecy0qd2bjNJWBT0WAAAABHRSTlMA2Do606wF2QAAAGlJREFUGJVdj1cWwCAIBLEsRU3uf9xobDH8+GZwUYi8i6ucJwrxKE+7D0G9Q4vlYqtmCSjndr4CgCgzlyFgfKfKCVO0LrPKjmiqMxGXkJwNnXskqWG+1oSM+BSwD8f29YLNjvx/OQrn+g99oQSoNmt3PgAAAABJRU5ErkJggg=="></img>
+  </a>
+
+  <a aria-label="License" href="#">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen"></img>
+  </a>  
   
-  <img src="https://img.shields.io/badge/OmniStack-done-green?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAALVBMVEVHcExxWsF0XMJzXMJxWcFsUsD///9jRrzY0u6Xh9Gsn9n39fyMecy0qd2bjNJWBT0WAAAABHRSTlMA2Do606wF2QAAAGlJREFUGJVdj1cWwCAIBLEsRU3uf9xobDH8+GZwUYi8i6ucJwrxKE+7D0G9Q4vlYqtmCSjndr4CgCgzlyFgfKfKCVO0LrPKjmiqMxGXkJwNnXskqWG+1oSM+BSwD8f29YLNjvx/OQrn+g99oQSoNmt3PgAAAABJRU5ErkJggg=="></img>
-  
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen"></img>
 </p>
 
 ## Instalação
@@ -59,8 +70,9 @@ Web -> resultado da aplicação em execução:
 
 ## Mobile
 App Mobile (React Native) -> resultado da execução:
-
-<img align="center" src="./imgs/app-mobile.jpeg"></img>
+<div align="center">
+  <img align="center" height="100" width="50" src="./imgs/app-mobile.jpeg"></img>
+</div>
 
 ## Licença
 
